@@ -1,8 +1,5 @@
 package pl.nbp.mb.test.datesTest;
 
-import pl.nbp.mb.test.instanceTest.model.Animal;
-
-import java.text.DateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -24,8 +21,8 @@ public class DatesTest {
 
         DateTimeFormatter fTimeShort = DateTimeFormatter.ofLocalizedTime( FormatStyle.SHORT );
         DateTimeFormatter fTimeMedium = DateTimeFormatter.ofLocalizedTime( FormatStyle.MEDIUM );
-        DateTimeFormatter fTimeLong = DateTimeFormatter.ofLocalizedTime( FormatStyle.LONG );
-        DateTimeFormatter fTimeFull = DateTimeFormatter.ofLocalizedTime( FormatStyle.FULL );
+//        DateTimeFormatter fTimeLong = DateTimeFormatter.ofLocalizedTime( FormatStyle.LONG );
+//        DateTimeFormatter fTimeFull = DateTimeFormatter.ofLocalizedTime( FormatStyle.FULL );
 
         DateTimeFormatter fDateTimeShort = DateTimeFormatter.ofLocalizedDateTime( FormatStyle.SHORT );
         DateTimeFormatter fDateTimeMedium = DateTimeFormatter.ofLocalizedDateTime( FormatStyle.MEDIUM );
