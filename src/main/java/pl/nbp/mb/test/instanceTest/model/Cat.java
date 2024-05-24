@@ -2,7 +2,7 @@ package pl.nbp.mb.test.instanceTest.model;
 
 public class Cat extends Animal {
 
-    private int whiskers;
+    final private int whiskers;
 
     public Cat(String name, int whiskers) {
         super(name, Kind.CAT);

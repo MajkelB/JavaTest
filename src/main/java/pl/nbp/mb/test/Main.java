@@ -5,6 +5,8 @@ import pl.nbp.mb.test.datesTest.DatesTest;
 import pl.nbp.mb.test.instanceTest.InstanceTest;
 
 public class Main {
+
+    @SuppressWarnings( "All" )
     public static void main(String[] args) {
 
 //        final String test2Run = "Inheritance";
