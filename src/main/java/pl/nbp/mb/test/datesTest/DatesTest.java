@@ -3,16 +3,17 @@ package pl.nbp.mb.test.datesTest;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.Locale;
 
 /* https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html */
 
 public class DatesTest {
 
     public static void run() {
-        LocalDate d1 = LocalDate.of( 2024, 5, 23 );
+        LocalDate d1 = LocalDate.of( 2024, 9, 23 );
         LocalTime t1 = LocalTime.of( 11, 7, 33, 333 );
-        LocalDateTime dt1 = LocalDateTime.of( 2024, 5, 23, 11, 7, 33, 333  );
-        ZonedDateTime zdt1 = ZonedDateTime.of( 2024, 5, 23, 11, 7, 33, 333, ZoneId.of("Europe/Warsaw"));
+        LocalDateTime dt1 = LocalDateTime.of( 2024, 9, 23, 11, 7, 33, 333  );
+        ZonedDateTime zdt1 = ZonedDateTime.of( 2024, 9, 23, 11, 7, 33, 333, ZoneId.of("Europe/Warsaw"));
 
         DateTimeFormatter fShort = DateTimeFormatter.ofLocalizedDate( FormatStyle.SHORT );  // ( DateTimeFormatter.ISO_LOCAL_DATE );
         DateTimeFormatter fMedium = DateTimeFormatter.ofLocalizedDate( FormatStyle.MEDIUM );  // ( DateTimeFormatter.ISO_LOCAL_DATE );
@@ -32,7 +33,7 @@ public class DatesTest {
 
 
         System.out.println( "------ DATE ------: " );
-        System.out.println( "SHORT: " + fShort.format( d1 ) );
+        System.out.println( "SHORT: " + fShort.format( d1 ) );     // ==         System.out.println( "SHORT2: " + d1.format( fShort ) );
         System.out.println( "MEDIUM: " + fMedium.format( d1 ) );
         System.out.println( "LONG: " + fLong.format( d1 ) );
         System.out.println( "FULL: " + fFull.format( d1 ) );
@@ -62,7 +63,13 @@ public class DatesTest {
         System.out.println( "ISO_LOCAL_TIME: " + dt1.format(DateTimeFormatter.ISO_LOCAL_TIME) );
         System.out.println( "ISO_LOCAL_DATE_TIME: " + dt1.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) );
 
-
+        System.out.println( "------ CUSTOM PATTERN ------: " );
+        DateTimeFormatter cf1 = DateTimeFormatter.ofPattern( "yyyy-MM-dd HH:mm:ss.SSS", Locale.US );
+        DateTimeFormatter cf2 = DateTimeFormatter.ofPattern( "yy-MMM-dd EEE HH:m:ss.SSS", Locale.US );
+        DateTimeFormatter cf3 = DateTimeFormatter.ofPattern( "yyyy-MMMM-dd EEEE HH:mm:ss.SSS", Locale.US );
+        System.out.println( "Custom pattern1: " + dt1.format( cf1 ) );
+        System.out.println( "Custom pattern2: " + dt1.format( cf2 ) );
+        System.out.println( "Custom pattern3: " + dt1.format( cf3 ) );
 
 
     }
