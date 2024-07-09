@@ -1,8 +1,10 @@
-package pl.nbp.mb.test.collections;
+package pl.nbp.mb.test.tests.collections;
+
+import pl.nbp.mb.test.Test;
 
 import java.util.*;
 
-public class CollectionsTest {
+public class CollectionsTest extends Test {
 
     public static void run() {
         System.out.println( "------ ARRAY LIST ------: " );

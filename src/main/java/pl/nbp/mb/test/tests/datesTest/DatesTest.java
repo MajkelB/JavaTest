@@ -1,4 +1,6 @@
-package pl.nbp.mb.test.datesTest;
+package pl.nbp.mb.test.tests.datesTest;
+
+import pl.nbp.mb.test.Test;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -7,7 +9,7 @@ import java.util.Locale;
 
 /* https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html */
 
-public class DatesTest {
+public class DatesTest extends Test {
 
     public static void run() {
         LocalDate d1 = LocalDate.of( 2024, 9, 23 );

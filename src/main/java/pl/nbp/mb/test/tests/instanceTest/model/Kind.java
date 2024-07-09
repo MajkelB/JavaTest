@@ -1,4 +1,4 @@
-package pl.nbp.mb.test.instanceTest.model;
+package pl.nbp.mb.test.tests.instanceTest.model;
 
 public enum Kind {
 

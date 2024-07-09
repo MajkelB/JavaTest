@@ -1,11 +1,12 @@
-package pl.nbp.mb.test.instanceTest;
+package pl.nbp.mb.test.tests.instanceTest;
 
-import pl.nbp.mb.test.instanceTest.model.Animal;
-import pl.nbp.mb.test.instanceTest.model.Cat;
-import pl.nbp.mb.test.instanceTest.model.Dog;
-import pl.nbp.mb.test.instanceTest.model.DogRace;
+import pl.nbp.mb.test.Test;
+import pl.nbp.mb.test.tests.instanceTest.model.Cat;
+import pl.nbp.mb.test.tests.instanceTest.model.Dog;
+import pl.nbp.mb.test.tests.instanceTest.model.Animal;
+import pl.nbp.mb.test.tests.instanceTest.model.DogRace;
 
-public class InstanceTest {
+public class InstanceTest extends Test {
 
     public static void run() {
 

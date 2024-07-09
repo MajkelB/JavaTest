@@ -1,38 +1,54 @@
 package pl.nbp.mb.test;
 
-import pl.nbp.mb.test.collections.CollectionsTest;
-import pl.nbp.mb.test.datesTest.DatesTest;
-import pl.nbp.mb.test.instanceTest.InstanceTest;
+import pl.nbp.mb.test.dict.OnOff;
+import pl.nbp.mb.test.tests.collections.CollectionsTest;
+import pl.nbp.mb.test.tests.datesTest.DatesTest;
+import pl.nbp.mb.test.tests.instanceTest.InstanceTest;
 
-public class Main {
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 
-    @SuppressWarnings( "All" )
+public class Main{
+
+    final static Map<Class<? extends Test>, OnOff> testsMap = new HashMap<>();
+
+    {
+        testsMap.put(CollectionsTest.class, OnOff.ON);
+        testsMap.put(DatesTest.class, OnOff.ON);
+        testsMap.put(InstanceTest.class, OnOff.OFF);
+    }
+
+    final static boolean RUN_ALL = false; // for quickly running all tests
+
+    @SuppressWarnings("All")
     public static void main(String[] args) {
 
-//        final String test2Run = "Inheritance";
-//        final String test2Run = "Dates";
-        final String test2Run = "Collections";
+        System.out.println( "Run tests" );
+        testsMap.forEach((t, o) -> { runTest( t, o ); });
+    }
 
-        switch ( test2Run ) {
-
-            case "Inheritance":         System.out.println("Instance test" );
-                                        InstanceTest.run();
-                                        break;
-
-            case "Dates":               System.out.println("Dates test" );
-                                        DatesTest.run();
-                                        break;
-
-            case "Collections":         System.out.println("Collections test" );
-                                        CollectionsTest.run();
-                                        break;
-
-            default:                    System.out.println("Wrong test" );
+    // Reflections
+    private static void runTest( Class<? extends Test> clazz, OnOff switcher ) {
+        System.out.println( "*************************************************************** Processing: " + clazz.getName() + " is " + switcher.name() );
+        if ( RUN_ALL || switcher.isOn() ) {
+            try {
+                m(clazz).invoke(null);
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            }
         }
+    }
 
-
-
-
-
+    private static <T extends Test> Method m(Class<T> clazz) {
+        try {
+            return clazz.getMethod("run", null);
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
