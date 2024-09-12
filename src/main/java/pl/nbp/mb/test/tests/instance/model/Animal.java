@@ -12,7 +12,8 @@ public class Animal {
     private String name;
     private Kind kind;
 
-//    public void sound() { }
+    @SuppressWarnings("unused")
+    public void sound() { }
 
     public Animal(String name) {
         this.name = name;
