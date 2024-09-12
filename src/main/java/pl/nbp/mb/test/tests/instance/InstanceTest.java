@@ -8,6 +8,7 @@ import pl.nbp.mb.test.tests.instance.model.DogRace;
 
 public class InstanceTest extends Test {
 
+    @SuppressWarnings("all")
     public static void run() {
 
         Cat cat = new Cat( "Mruczek", 8 );

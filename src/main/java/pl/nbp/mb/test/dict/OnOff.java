@@ -4,7 +4,7 @@ public enum OnOff {
     ON, OFF;
 
     public boolean isOn() {
-        return (this==ON?true:false);
+        return this==ON;
     }
 
 }

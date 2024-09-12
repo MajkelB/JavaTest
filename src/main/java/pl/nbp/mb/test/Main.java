@@ -33,6 +33,7 @@ public class Main{
     }
 
     // Reflections
+    @SuppressWarnings("all")
     private static void runTest( Class<? extends Test> clazz, OnOff switcher ) {
         System.out.println( "*************************************************************** Processing: " + clazz.getName() + " is " + switcher.name() );
         if ( RUN_ALL || switcher.isOn() ) {
@@ -46,6 +47,7 @@ public class Main{
         }
     }
 
+    @SuppressWarnings("all")
     private static <T extends Test> Method m(Class<T> clazz) {
         try {
             return clazz.getMethod("run", null);

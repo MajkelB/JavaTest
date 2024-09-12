@@ -11,6 +11,7 @@ import java.util.Locale;
 
 public class DatesTest extends Test {
 
+    @SuppressWarnings("unused")
     public static void run() {
         LocalDate d1 = LocalDate.of( 2024, 9, 23 );
         LocalTime t1 = LocalTime.of( 11, 7, 33, 333 );

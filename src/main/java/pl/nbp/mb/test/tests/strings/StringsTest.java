@@ -4,6 +4,7 @@ import pl.nbp.mb.test.Test;
 
 public class StringsTest extends Test {
 
+    @SuppressWarnings("all")
     public static void run() {
         System.out.println("------ Strings test------: ");
         String s1 = "Rock&Roll2024";

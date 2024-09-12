@@ -6,6 +6,7 @@ import java.util.*;
 
 public class CollectionsTest extends Test {
 
+    @SuppressWarnings("unused")
     public static void run() {
         System.out.println( "------ ARRAY LIST ------: " );
         ArrayList<String> names = new ArrayList<>();
