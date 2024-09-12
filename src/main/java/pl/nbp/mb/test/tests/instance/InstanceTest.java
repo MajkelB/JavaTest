@@ -1,10 +1,10 @@
-package pl.nbp.mb.test.tests.instanceTest;
+package pl.nbp.mb.test.tests.instance;
 
 import pl.nbp.mb.test.Test;
-import pl.nbp.mb.test.tests.instanceTest.model.Cat;
-import pl.nbp.mb.test.tests.instanceTest.model.Dog;
-import pl.nbp.mb.test.tests.instanceTest.model.Animal;
-import pl.nbp.mb.test.tests.instanceTest.model.DogRace;
+import pl.nbp.mb.test.tests.instance.model.Cat;
+import pl.nbp.mb.test.tests.instance.model.Dog;
+import pl.nbp.mb.test.tests.instance.model.Animal;
+import pl.nbp.mb.test.tests.instance.model.DogRace;
 
 public class InstanceTest extends Test {
 

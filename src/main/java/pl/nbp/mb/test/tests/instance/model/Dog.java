@@ -1,4 +1,4 @@
-package pl.nbp.mb.test.tests.instanceTest.model;
+package pl.nbp.mb.test.tests.instance.model;
 
 import lombok.Getter;
 import lombok.Setter;

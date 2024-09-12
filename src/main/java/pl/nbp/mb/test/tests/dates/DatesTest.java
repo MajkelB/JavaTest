@@ -1,4 +1,4 @@
-package pl.nbp.mb.test.tests.datesTest;
+package pl.nbp.mb.test.tests.dates;
 
 import pl.nbp.mb.test.Test;
 

@@ -1,4 +1,4 @@
-package pl.nbp.mb.test.tests.instanceTest.model;
+package pl.nbp.mb.test.tests.instance.model;
 
 public class Cat extends Animal {
 
