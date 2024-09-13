@@ -4,6 +4,7 @@ import pl.nbp.mb.test.dict.OnOff;
 import pl.nbp.mb.test.tests.collections.CollectionsTest;
 import pl.nbp.mb.test.tests.dates.DatesTest;
 import pl.nbp.mb.test.tests.imports.ImportsTest;
+import pl.nbp.mb.test.tests.initializations.InitializationsTest;
 import pl.nbp.mb.test.tests.instance.InstanceTest;
 import pl.nbp.mb.test.tests.strings.StringsTest;
 
@@ -21,8 +22,9 @@ public class Main{
         testsMap.put(CollectionsTest.class, OnOff.OFF);
         testsMap.put(DatesTest.class, OnOff.OFF);
         testsMap.put(InstanceTest.class, OnOff.OFF);
-        testsMap.put(StringsTest.class, OnOff.ON);
+        testsMap.put(StringsTest.class, OnOff.OFF);
         testsMap.put(ImportsTest.class, OnOff.OFF);
+        testsMap.put(InitializationsTest.class, OnOff.ON);
     }
 
     final static boolean RUN_ALL = false; // for quickly running all tests
