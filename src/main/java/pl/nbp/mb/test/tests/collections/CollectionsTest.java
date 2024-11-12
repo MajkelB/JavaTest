@@ -3,6 +3,7 @@ package pl.nbp.mb.test.tests.collections;
 import pl.nbp.mb.test.Test;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class CollectionsTest extends Test {
 
@@ -41,6 +42,10 @@ public class CollectionsTest extends Test {
         Map<String, Integer> namesHM = new HashMap<>();
         addNames2Map( namesHM );
         System.out.println( "HashMap initial: " + namesHM );        // random order
+        Map<String, Integer> namesLHMSorted = namesHM.entrySet().stream()
+                .sorted( Comparator.comparing(Map.Entry::getKey) ) //   == .sorted( (e1,e2) -> e1.getKey().compareTo( e2.getKey() )  )
+                .collect(Collectors.toMap( Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new ) );
+        System.out.println( "LinkedHashMap sorted: " + namesLHMSorted );         // sorted
 
         System.out.println( "------ TREE MAP ------: " );
         Map<String, Integer> namesTM = new TreeMap<>();

@@ -1,5 +1,6 @@
 package pl.nbp.mb.test;
 
+import pl.nbp.mb.test.arrays.ArraysTest;
 import pl.nbp.mb.test.dict.OnOff;
 import pl.nbp.mb.test.tests.collections.CollectionsTest;
 import pl.nbp.mb.test.tests.dates.DatesTest;
@@ -9,20 +10,21 @@ import pl.nbp.mb.test.tests.strings.StringsTest;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main{
 
-    final static Map<Class<? extends Test>, OnOff> testsMap = new HashMap<>();
+    final static Map<Class<? extends Test>, OnOff> testsMap = new HashMap<>(); // = new TreeMap<>();
 
     static
     {
-        testsMap.put(CollectionsTest.class, OnOff.OFF);
+        testsMap.put(CollectionsTest.class, OnOff.ON);
         testsMap.put(DatesTest.class, OnOff.OFF);
         testsMap.put(InstanceTest.class, OnOff.OFF);
-        testsMap.put(StringsTest.class, OnOff.ON);
+        testsMap.put(StringsTest.class, OnOff.OFF);
         testsMap.put(ImportsTest.class, OnOff.OFF);
+        testsMap.put(ArraysTest.class, OnOff.ON);
+
     }
 
     final static boolean RUN_ALL = false; // for quickly running all tests
