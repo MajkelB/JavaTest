@@ -14,7 +14,6 @@ public class ArraysTest extends Test {
         System.out.println( "tab1.length="+tab1.length );
         System.out.println( "tab1="+Arrays.toString( tab1 ) );
 
-
-
     }
+
 }

@@ -7,6 +7,7 @@ import pl.nbp.mb.test.tests.dates.DatesTest;
 import pl.nbp.mb.test.tests.imports.ImportsTest;
 import pl.nbp.mb.test.tests.initializations.InitializationsTest;
 import pl.nbp.mb.test.tests.instance.InstanceTest;
+import pl.nbp.mb.test.tests.others.FreeTest;
 import pl.nbp.mb.test.tests.strings.StringsTest;
 
 import java.lang.reflect.InvocationTargetException;
@@ -20,13 +21,14 @@ public class Main{
 
     static
     {
-        testsMap.put(CollectionsTest.class, OnOff.ON);
+        testsMap.put(CollectionsTest.class, OnOff.OFF);
         testsMap.put(DatesTest.class, OnOff.OFF);
-        testsMap.put(InstanceTest.class, OnOff.OFF);
+        testsMap.put(InstanceTest.class, OnOff.ON);
         testsMap.put(StringsTest.class, OnOff.OFF);
         testsMap.put(ImportsTest.class, OnOff.OFF);
         testsMap.put(InitializationsTest.class, OnOff.ON);
         testsMap.put(ArraysTest.class, OnOff.ON);
+        testsMap.put(FreeTest.class, OnOff.ON);
 
     }
 

@@ -11,6 +11,8 @@ public class Animal {
 
     private String name;
     private Kind kind;
+    public int length = 10;
+    public static String color = "Unknown";
 
     @SuppressWarnings("unused")
     public void sound() { }
@@ -23,6 +25,10 @@ public class Animal {
     public Animal(String name, Kind kind) {
         this.name = name;
         this.kind = kind;
+    }
+
+    public static String getColor() {
+        return color;
     }
 
     @Override
