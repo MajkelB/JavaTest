@@ -1,4 +1,4 @@
-package pl.nbp.mb.test.arrays;
+package pl.nbp.mb.test.tests.arrays;
 
 import pl.nbp.mb.test.Test;
 

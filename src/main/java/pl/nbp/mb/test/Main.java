@@ -1,6 +1,6 @@
 package pl.nbp.mb.test;
 
-import pl.nbp.mb.test.arrays.ArraysTest;
+import pl.nbp.mb.test.tests.arrays.ArraysTest;
 import pl.nbp.mb.test.dict.OnOff;
 import pl.nbp.mb.test.tests.collections.CollectionsTest;
 import pl.nbp.mb.test.tests.dates.DatesTest;
