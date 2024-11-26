@@ -1,5 +1,6 @@
 package pl.nbp.mb.test;
 
+import pl.nbp.mb.test.arrays.ArraysTest;
 import pl.nbp.mb.test.dict.OnOff;
 import pl.nbp.mb.test.tests.collections.CollectionsTest;
 import pl.nbp.mb.test.tests.dates.DatesTest;
@@ -19,12 +20,14 @@ public class Main{
 
     static
     {
-        testsMap.put(CollectionsTest.class, OnOff.OFF);
+        testsMap.put(CollectionsTest.class, OnOff.ON);
         testsMap.put(DatesTest.class, OnOff.OFF);
         testsMap.put(InstanceTest.class, OnOff.OFF);
         testsMap.put(StringsTest.class, OnOff.OFF);
         testsMap.put(ImportsTest.class, OnOff.OFF);
         testsMap.put(InitializationsTest.class, OnOff.ON);
+        testsMap.put(ArraysTest.class, OnOff.ON);
+
     }
 
     final static boolean RUN_ALL = false; // for quickly running all tests
