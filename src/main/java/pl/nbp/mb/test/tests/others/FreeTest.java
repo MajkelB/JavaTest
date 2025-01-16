@@ -80,6 +80,8 @@ public class FreeTest extends Test {
 //        List<Integer> iList = new ArrayList<>();
 //        iList.add( null );
 //        for( int hh: iList ) ; // null na int -> Exception
+
+        switchTest();
     }
 
     private static void modTable( int t[] ) {
@@ -87,5 +89,17 @@ public class FreeTest extends Test {
             t[i] = t[i] + 1;
         }
         System.out.println( Arrays.toString( t ) );
+    }
+
+
+    private static void switchTest() {
+        int i = 5;
+        switch ( i ) {
+            default: System.out.println( "default" );
+            case 1: System.out.println( "1" ); break;
+            case 2: System.out.println( "2" ); break;
+            case 3: System.out.println( "3" ); break;
+            case 4: System.out.println( "4" ); break;
+        }
     }
 }

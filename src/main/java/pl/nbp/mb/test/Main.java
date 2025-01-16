@@ -28,7 +28,7 @@ public class Main{
         testsMap.put(ImportsTest.class, OnOff.OFF);
         testsMap.put(InitializationsTest.class, OnOff.OFF);
         testsMap.put(ArraysTest.class, OnOff.ON);
-        testsMap.put(FreeTest.class, OnOff.OFF);
+        testsMap.put(FreeTest.class, OnOff.ON);
 
     }
 
