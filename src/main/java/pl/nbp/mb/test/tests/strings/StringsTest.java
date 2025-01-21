@@ -26,5 +26,8 @@ public class StringsTest extends Test {
         System.out.println("Replace: " + s1.replace( "o", "X") ); // all occurencies
         System.out.println("S1 after replace: " + s1 ); // s1 has not changed
 
+        String str = " ";
+        System.out.println( "Trim: *" + str.trim() + "*" );
+
     }
 }

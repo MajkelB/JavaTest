@@ -70,6 +70,15 @@ public class ArraysTest extends Test {
         System.out.println( "(Not) Equals: "+Arrays.equals( strTab, strTab2 ) ); // not equals
         System.out.println( "Compare: "+Arrays.compare( strTab, strTab2 ) ); // compare
 
+        int it1[] = { 1 ,3 ,5 };
+        int it2[] = { 2 ,4 };
+
+        System.out.println( "it1="+Arrays.toString( it1 ) );
+        System.out.println( "it2="+Arrays.toString( it2 ) );
+        it2 = it1;
+        System.out.println( "it2 (po przepisaniu)="+Arrays.toString( it2 ) );
+
+
     }
 
 }
