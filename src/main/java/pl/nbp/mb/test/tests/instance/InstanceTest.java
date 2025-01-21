@@ -43,7 +43,7 @@ public class InstanceTest extends Test {
         HidingBase hb = new HidingSub();
         hb.doSomething();
 
-
+        B.check();
     }
 
 

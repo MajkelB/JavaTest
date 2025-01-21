@@ -101,5 +101,32 @@ public class FreeTest extends Test {
             case 3: System.out.println( "3" ); break;
             case 4: System.out.println( "4" ); break;
         }
+
+//        IndexOutOfBoundsException a;
+//        ArrayIndexOutOfBoundsException b;
+//        ClassCastException c;
+//        IllegalArgumentException d;
+//        StackOverflowError e;
+
+        final int[] itab = new int[5];
+        itab[0] = 1;
+        itab[2] = 3;
+
+
+        List a = new ArrayList<>(); // to jest ok
+//        List<> a1 = new ArrayList<>(); // to nie jest ok
+
+        double d1 = 0.22;
+        double d2 = 0.11;
+        double d3 = d1 % d2;
+
+        float f1 = 55.5f;
+        float f2 = 0.44f;
+        float f3 = f1 % f2;
+
+        long ll = 124;
+        float ff = 445;
+
+
     }
 }

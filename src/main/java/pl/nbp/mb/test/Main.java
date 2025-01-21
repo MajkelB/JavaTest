@@ -23,7 +23,7 @@ public class Main{
     {
         testsMap.put(CollectionsTest.class, OnOff.OFF);
         testsMap.put(DatesTest.class, OnOff.OFF);
-        testsMap.put(InstanceTest.class, OnOff.OFF);
+        testsMap.put(InstanceTest.class, OnOff.ON);
         testsMap.put(StringsTest.class, OnOff.OFF);
         testsMap.put(ImportsTest.class, OnOff.OFF);
         testsMap.put(InitializationsTest.class, OnOff.OFF);
